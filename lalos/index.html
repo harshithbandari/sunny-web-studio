@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lalo's Barbershop — 20 Años de Oficio · Little Village, Chicago</title>
+<meta name="description" content="Lalo's Barbershop — 20 años de experiencia, nueva ubicación en La Villita. Cortes, fades, barba. 5.0★ en Google. 3140 W 25th St, Chicago. (773) 571-2344.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--negro:#0E0E10;--carbon:#17171B;--panel:#1F1F25;--oro:#C9A24B;--oro-claro:#E8CD8F;--humo:#A6A6AD;--blanco:#F4F2ED;--rojo:#A32020}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--negro);color:var(--blanco);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.disp{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.04em}
+body.en .es{display:none!important}
+body:not(.en) .en{display:none!important}
+
+nav{position:fixed;inset:0 0 auto 0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;transition:.3s}
+nav.solid{background:rgba(14,14,16,.94);backdrop-filter:blur(10px);border-bottom:1px solid #c9a24b33}
+.brand{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.35rem;letter-spacing:.08em;color:var(--blanco);text-decoration:none;text-transform:uppercase}
+.brand em{color:var(--oro);font-style:normal}
+.nav-right{display:flex;gap:10px;align-items:center}
+.lang-btn{background:transparent;border:1px solid #c9a24b66;color:var(--oro-claro);padding:6px 12px;border-radius:4px;font-size:.78rem;font-weight:600;cursor:pointer;letter-spacing:.08em}
+.call-pill{background:var(--oro);color:var(--negro);text-decoration:none;font-weight:800;font-size:.82rem;padding:8px 15px;border-radius:4px;letter-spacing:.05em}
+
+/* barber pole */
+.pole{position:absolute;top:0;bottom:0;width:10px;overflow:hidden;opacity:.85}
+.pole.left{left:0}.pole.right{right:0}
+.pole i{position:absolute;inset:-60px 0;background:repeating-linear-gradient(45deg,var(--rojo) 0 14px,var(--blanco) 14px 28px,#1c3f94 28px 42px,var(--blanco) 42px 56px);animation:spin 3.5s linear infinite}
+@keyframes spin{to{transform:translateY(56px)}}
+
+header{min-height:100svh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;
+  background:radial-gradient(80% 60% at 50% 0%,#c9a24b1f 0%,transparent 60%),linear-gradient(180deg,#141418,var(--negro) 80%)}
+header::before{content:"";position:absolute;inset:0;opacity:.05;background-image:repeating-linear-gradient(0deg,transparent 0 3px,#fff 3px 4px)}
+.hero-inner{position:relative;z-index:2;padding:100px 30px 70px;max-width:760px;animation:rise 1s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.badge-new{display:inline-block;background:var(--rojo);color:#fff;font-weight:800;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;padding:8px 18px;border-radius:3px;margin-bottom:22px;animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 #a3202088}50%{box-shadow:0 0 0 12px transparent}}
+h1{font-size:clamp(3rem,11vw,5.6rem);font-weight:800;line-height:.95;margin-bottom:16px}
+h1 em{color:var(--oro);font-style:normal}
+.hero-sub{color:var(--humo);font-size:clamp(1rem,2.6vw,1.15rem);max-width:520px;margin:0 auto 26px}
+.stars{color:var(--oro);letter-spacing:.25em;margin-bottom:30px;font-size:1.05rem}
+.stars b{color:var(--blanco);letter-spacing:.02em;font-size:.88rem;margin-left:8px;font-weight:600}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:.92rem;padding:16px 30px;border-radius:4px;transition:.25s;letter-spacing:.06em;text-transform:uppercase;font-family:'Barlow Condensed',sans-serif;font-size:1.05rem}
+.btn-gold{background:var(--oro);color:var(--negro)}
+.btn-gold:hover{background:var(--oro-claro);transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid #c9a24b88;color:var(--oro-claro)}
+.btn-ghost:hover{background:#c9a24b1a}
+
+.quickbar{background:var(--carbon);display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;border-top:1px solid #c9a24b33;border-bottom:1px solid #c9a24b33}
+.quickbar>div{padding:18px 16px;text-align:center;background:var(--panel)}
+.quickbar b{display:block;color:var(--oro);font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;margin-bottom:4px}
+.quickbar span,.quickbar a{color:var(--blanco);font-size:.92rem;text-decoration:none}
+
+section{padding:88px 24px}
+.wrap{max-width:1000px;margin:0 auto}
+.sec-kicker{color:var(--oro);font-weight:700;letter-spacing:.35em;font-size:.7rem;text-transform:uppercase;margin-bottom:12px}
+.sec-title{font-size:clamp(2.1rem,6vw,3.4rem);font-weight:800;line-height:1.02;margin-bottom:18px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.on{opacity:1;transform:none}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.about p{color:var(--humo);margin-bottom:14px}
+.num-row{display:flex;gap:34px;margin-top:26px}
+.num b{font-family:'Barlow Condensed',sans-serif;font-size:2.6rem;color:var(--oro);display:block;line-height:1}
+.num span{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--humo)}
+.photo-slot{border-radius:8px;min-height:340px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:16px;
+  background:linear-gradient(155deg,#2a2a31,#17171b 60%);border:1px solid #c9a24b2e}
+.photo-slot::after{content:"✂";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:5rem;opacity:.12;color:var(--oro)}
+.photo-slot span{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#8b8b93;position:relative;z-index:2}
+
+/* SERVICES */
+.services{background:var(--carbon)}
+.svc-list{max-width:640px;margin:30px auto 0}
+.svc{display:flex;align-items:baseline;gap:14px;padding:20px 4px;border-bottom:1px solid #ffffff14;transition:.25s}
+.svc:hover{padding-left:12px;border-color:#c9a24b66}
+.svc h3{font-size:1.35rem;white-space:nowrap}
+.svc .dots{flex:1;border-bottom:2px dotted #3a3a42;transform:translateY(-4px)}
+.svc .price{font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:800;color:var(--oro)}
+.svc small{display:block;color:var(--humo);font-size:.8rem;font-family:'Inter',sans-serif;text-transform:none;letter-spacing:0;font-weight:400}
+.svc-note{text-align:center;color:#77777f;font-size:.78rem;margin-top:18px}
+
+/* BOOK */
+.book{background:linear-gradient(160deg,#1a1508,#0e0e10 70%);text-align:center;position:relative;overflow:hidden}
+.book::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 50% 100%,#c9a24b22 0%,transparent 70%)}
+.book .wrap{position:relative;z-index:2}
+.book-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:36px 0}
+.step{background:#ffffff08;border:1px solid #c9a24b2e;border-radius:8px;padding:26px 20px}
+.step b{font-family:'Barlow Condensed',sans-serif;font-size:2rem;color:var(--oro);display:block;margin-bottom:8px}
+.step p{color:var(--humo);font-size:.88rem}
+
+/* REVIEWS */
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:32px}
+.rev{background:var(--panel);border:1px solid #ffffff10;border-radius:8px;padding:24px;text-align:left}
+.rev .s{color:var(--oro);letter-spacing:.2em;margin-bottom:10px}
+.rev p{font-style:italic;color:#c8c8cf;font-size:.92rem;margin-bottom:12px}
+.rev b{font-size:.75rem;letter-spacing:.12em;color:var(--oro);text-transform:uppercase}
+
+/* VISIT */
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;margin-top:8px}
+.info-card{background:var(--panel);border:1px solid #c9a24b2e;border-radius:8px;padding:30px}
+.info-card .row{padding:13px 0;border-bottom:1px dashed #3a3a42}
+.info-card .row:last-child{border:none}
+.info-card h3{color:var(--oro);font-size:1.05rem;margin-bottom:4px}
+.info-card p,.info-card td{color:#c8c8cf}
+.hours-table{width:100%;font-size:.92rem}
+.hours-table td{padding:4px 0}
+.hours-table td:last-child{text-align:right;font-weight:600;color:var(--blanco)}
+.map-frame{border:0;width:100%;min-height:360px;border-radius:8px;filter:grayscale(.2) contrast(1.05)}
+
+footer{background:#0a0a0c;color:#77777f;text-align:center;padding:44px 24px;font-size:.85rem;border-top:1px solid #c9a24b26}
+footer .fb{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.5rem;color:var(--blanco);display:block;margin-bottom:8px;text-transform:uppercase;letter-spacing:.08em}
+footer .fb em{color:var(--oro);font-style:normal}
+footer a{color:var(--oro);text-decoration:none}
+
+.mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:99;display:none;grid-template-columns:1fr 1fr}
+.mobile-bar a{padding:16px;text-align:center;font-weight:800;font-size:1rem;text-decoration:none;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.08em}
+.mobile-bar a:first-child{background:var(--oro);color:var(--negro)}
+.mobile-bar a:last-child{background:var(--panel);color:var(--oro);border-top:1px solid #c9a24b44}
+
+@media(max-width:820px){
+  .about-grid,.visit-grid{grid-template-columns:1fr}
+  section{padding:64px 20px}
+  .mobile-bar{display:grid}
+  footer{padding-bottom:100px}
+  .num-row{justify-content:space-between;gap:10px}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="brand" href="#">Lalo's <em>Barbershop</em></a>
+  <div class="nav-right">
+    <button class="lang-btn" id="langToggle">EN / ES</button>
+    <a class="call-pill" href="tel:+17735712344">☎ <span class="es">Llamar</span><span class="en">Call</span></a>
+  </div>
+</nav>
+
+<header>
+  <div class="pole left"><i></i></div>
+  <div class="pole right"><i></i></div>
+  <div class="hero-inner">
+    <span class="badge-new"><span class="es">★ Nueva ubicación — Calle 25</span><span class="en">★ New location — 25th Street</span></span>
+    <h1><span class="es">20 años de oficio.<br><em>Un solo estándar.</em></span><span class="en">20 years of craft.<br><em>One standard.</em></span></h1>
+    <p class="hero-sub"><span class="es">Cortes clásicos, fades limpios y barba con navaja — hechos por un barbero que lleva dos décadas perfeccionando su arte en La Villita.</span><span class="en">Classic cuts, clean fades, and straight-razor beard work — by a barber who's spent two decades perfecting his craft in Little Village.</span></p>
+    <div class="stars">★★★★★ <b>5.0 · Google</b></div>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="tel:+17735712344">✂ <span class="es">Agenda tu corte</span><span class="en">Book your cut</span></a>
+      <a class="btn btn-ghost" href="#servicios"><span class="es">Ver servicios</span><span class="en">See services</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="quickbar">
+  <div><b><span class="es">Horario</span><span class="en">Hours</span></b><span><span class="es">Mar–Sáb 9–7 · Dom 9–3</span><span class="en">Tue–Sat 9–7 · Sun 9–3</span></span></div>
+  <div><b><span class="es">Dirección</span><span class="en">Address</span></b><span>3140 W 25th St, Chicago</span></div>
+  <div><b><span class="es">Citas y walk-ins</span><span class="en">Appointments & walk-ins</span></b><a href="tel:+17735712344">(773) 571-2344</a></div>
+</div>
+
+<section id="nosotros">
+  <div class="wrap about-grid">
+    <div class="about reveal">
+      <p class="sec-kicker"><span class="es">El barbero</span><span class="en">The barber</span></p>
+      <h2 class="sec-title"><span class="es">Lalo — el mismo de siempre, ahora en su propia casa</span><span class="en">Lalo — same hands, now in his own shop</span></h2>
+      <p><span class="es">Después de 20 años cortando el cabello de La Villita, Lalo abrió su propia barbería en la calle 25. Los clientes que lo siguen desde hace años ya saben lo que eso significa: el corte sale bien, a la primera, siempre.</span><span class="en">After 20 years cutting Little Village's hair, Lalo opened his own shop on 25th Street. The clients who've followed him for years already know what that means: the cut comes out right, the first time, every time.</span></p>
+      <p><span class="es">Aquí no hay prisa ni cortes a medias. Hay oficio, plática y un fade que habla por sí solo.</span><span class="en">No rush, no half-done cuts. Just craft, good conversation, and a fade that speaks for itself.</span></p>
+      <div class="num-row">
+        <div class="num"><b>20+</b><span><span class="es">años de oficio</span><span class="en">years of craft</span></span></div>
+        <div class="num"><b>5.0</b><span><span class="es">estrellas Google</span><span class="en">Google stars</span></span></div>
+        <div class="num"><b>1</b><span><span class="es">estándar: perfecto</span><span class="en">standard: perfect</span></span></div>
+      </div>
+    </div>
+    <div class="photo-slot reveal"><span><span class="es">Foto: Lalo en su silla</span><span class="en">Photo: Lalo at his chair</span></span></div>
+  </div>
+</section>
+
+<section class="services" id="servicios">
+  <div class="wrap" style="text-align:center">
+    <p class="sec-kicker reveal"><span class="es">Servicios</span><span class="en">Services</span></p>
+    <h2 class="sec-title reveal"><span class="es">Precios claros, trabajo limpio</span><span class="en">Clear prices, clean work</span></h2>
+    <div class="svc-list" style="text-align:left">
+      <div class="svc reveal"><h3><span class="es">Corte clásico</span><span class="en">Classic cut</span><small><span class="es">tijera y máquina, acabado con navaja</span><span class="en">scissor & clipper, razor finish</span></small></h3><div class="dots"></div><div class="price">$25</div></div>
+      <div class="svc reveal"><h3>Fade<small><span class="es">low, mid, high o skin</span><span class="en">low, mid, high, or skin</span></small></h3><div class="dots"></div><div class="price">$30</div></div>
+      <div class="svc reveal"><h3><span class="es">Corte + barba</span><span class="en">Cut + beard</span><small><span class="es">el paquete completo</span><span class="en">the full package</span></small></h3><div class="dots"></div><div class="price">$40</div></div>
+      <div class="svc reveal"><h3><span class="es">Barba con navaja</span><span class="en">Straight-razor shave</span><small><span class="es">toalla caliente incluida</span><span class="en">hot towel included</span></small></h3><div class="dots"></div><div class="price">$20</div></div>
+      <div class="svc reveal"><h3><span class="es">Corte de niño</span><span class="en">Kids' cut</span><small><span class="es">12 años o menos</span><span class="en">12 & under</span></small></h3><div class="dots"></div><div class="price">$18</div></div>
+    </div>
+    <p class="svc-note"><span class="es">* Precios de muestra — confirmar con el negocio.</span><span class="en">* Sample prices — confirm with the business.</span></p>
+  </div>
+</section>
+
+<section class="book" id="cita">
+  <div class="wrap">
+    <p class="sec-kicker reveal"><span class="es">Tu próxima cita</span><span class="en">Your next appointment</span></p>
+    <h2 class="sec-title reveal"><span class="es">Así de fácil</span><span class="en">This easy</span></h2>
+    <div class="book-steps">
+      <div class="step reveal"><b>1</b><p><span class="es">Llama o manda mensaje con el día y la hora que prefieres.</span><span class="en">Call or text with your preferred day and time.</span></p></div>
+      <div class="step reveal"><b>2</b><p><span class="es">Lalo te confirma en minutos.</span><span class="en">Lalo confirms in minutes.</span></p></div>
+      <div class="step reveal"><b>3</b><p><span class="es">Llegas, te sientas, sales impecable.</span><span class="en">Show up, sit down, walk out sharp.</span></p></div>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="tel:+17735712344">☎ <span class="es">Llamar ahora</span><span class="en">Call now</span></a>
+      <a class="btn btn-ghost" href="sms:+17735712344?&body=Hola%20Lalo%2C%20quiero%20agendar%20un%20corte.">💬 <span class="es">Mandar mensaje</span><span class="en">Send a text</span></a>
+    </div>
+    <p style="color:#77777f;font-size:.82rem;margin-top:18px"><span class="es">Walk-ins bienvenidos cuando hay silla libre.</span><span class="en">Walk-ins welcome when a chair is open.</span></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap" style="text-align:center">
+    <p class="sec-kicker reveal"><span class="es">La palabra del barrio</span><span class="en">Word on the block</span></p>
+    <h2 class="sec-title reveal"><span class="es">5.0 — sin excepciones</span><span class="en">5.0 — no exceptions</span></h2>
+    <div class="rev-grid">
+      <div class="rev reveal"><div class="s">★★★★★</div><p><span class="es">"Llevo años cortándome con Lalo. Nunca un corte malo. Nunca."</span><span class="en">"Lalo's been cutting my hair for years. Never a bad cut. Never."</span></p><b>Google</b></div>
+      <div class="rev reveal"><div class="s">★★★★★</div><p><span class="es">"El fade más limpio de La Villita. Vale cada peso."</span><span class="en">"Cleanest fade in Little Village. Worth every dollar."</span></p><b>Google</b></div>
+      <div class="rev reveal"><div class="s">★★★★★</div><p><span class="es">"Llevé a mi hijo por primera vez — Lalo lo trató como rey."</span><span class="en">"Took my son for the first time — Lalo treated him like a king."</span></p><b>Google</b></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--carbon)" id="visita">
+  <div class="wrap">
+    <p class="sec-kicker reveal"><span class="es">Visítanos</span><span class="en">Visit us</span></p>
+    <h2 class="sec-title reveal"><span class="es">Calle 25 — La Villita</span><span class="en">25th Street — Little Village</span></h2>
+    <div class="visit-grid">
+      <div class="info-card reveal">
+        <div class="row"><h3><span class="es">Dirección</span><span class="en">Address</span></h3><p>3140 W 25th St, Chicago, IL 60623</p></div>
+        <div class="row"><h3><span class="es">Teléfono</span><span class="en">Phone</span></h3><p><a href="tel:+17735712344" style="color:var(--oro);font-weight:700;text-decoration:none">(773) 571-2344</a></p></div>
+        <div class="row"><h3><span class="es">Horario</span><span class="en">Hours</span></h3>
+          <table class="hours-table">
+            <tr><td><span class="es">Martes – Sábado</span><span class="en">Tuesday – Saturday</span></td><td>9:00 am – 7:00 pm</td></tr>
+            <tr><td><span class="es">Domingo</span><span class="en">Sunday</span></td><td>9:00 am – 3:00 pm</td></tr>
+            <tr><td><span class="es">Lunes</span><span class="en">Monday</span></td><td><span class="es">Cerrado</span><span class="en">Closed</span></td></tr>
+          </table>
+          <p style="font-size:.75rem;color:#77777f;margin-top:8px"><span class="es">* Horario de muestra — confirmar con el negocio.</span><span class="en">* Sample hours — confirm with the business.</span></p>
+        </div>
+        <a class="btn btn-gold" style="width:100%;justify-content:center;margin-top:12px" href="https://maps.google.com/?q=3140+W+25th+St,+Chicago,+IL+60623" target="_blank" rel="noopener">📍 <span class="es">Cómo llegar</span><span class="en">Get directions</span></a>
+      </div>
+      <iframe class="map-frame reveal" loading="lazy" title="Mapa — Lalo's Barbershop"
+        src="https://www.google.com/maps?q=3140+W+25th+St,+Chicago,+IL+60623&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="fb">Lalo's <em>Barbershop</em></span>
+  <p>3140 W 25th St, Chicago, IL 60623 · <a href="tel:+17735712344">(773) 571-2344</a></p>
+  <p style="margin-top:14px;opacity:.6"><span class="es">Oficio de barrio desde hace 20 años.</span><span class="en">Neighborhood craft for 20 years.</span></p>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+17735712344">☎ <span class="es">Llamar</span><span class="en">Call</span></a>
+  <a href="sms:+17735712344?&body=Hola%20Lalo%2C%20quiero%20agendar%20un%20corte."><span class="es">💬 Mensaje</span><span class="en">💬 Text</span></a>
+</div>
+
+<script>
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>40),{passive:true});
+document.getElementById('langToggle').onclick=()=>{
+  document.body.classList.toggle('en');
+  document.documentElement.lang=document.body.classList.contains('en')?'en':'es';
+};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

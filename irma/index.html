@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Cocina de Irma — Cocina Mexicana Casera · Little Village, Chicago</title>
+<meta name="description" content="La Cocina de Irma — cocina mexicana hecha en casa en La Villita, Chicago. 4.9★ en Google. Comida con sabor a familia. 4224 W 31st St, Chicago IL 60623.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rojo:#8C2318; --rojo-osc:#5e150d; --terracota:#C0552F; --crema:#FBF3E4;
+  --crema-2:#F4E7CE; --verde:#3E5622; --tinta:#2B1B12; --oro:#D9A441;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--tinta);background:var(--crema);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'Fraunces',serif}
+img{max-width:100%}
+body.en .es{display:none!important}
+body:not(.en) .lang-en-only{display:none!important}
+body.en .lang-es-only{display:none!important}
+body:not(.en) .en{display:none!important}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;transition:.3s;background:transparent}
+nav.solid{background:rgba(43,27,18,.92);backdrop-filter:blur(10px);box-shadow:0 2px 20px rgba(0,0,0,.25)}
+.brand{color:var(--crema);font-family:'Fraunces',serif;font-weight:900;font-size:1.15rem;letter-spacing:.02em;text-decoration:none}
+.brand em{color:var(--oro);font-style:normal}
+.nav-right{display:flex;align-items:center;gap:10px}
+.lang-btn{background:rgba(251,243,228,.15);border:1px solid rgba(251,243,228,.4);color:var(--crema);padding:6px 12px;border-radius:999px;font-size:.78rem;font-weight:600;cursor:pointer;letter-spacing:.06em}
+.call-pill{background:var(--oro);color:var(--tinta);text-decoration:none;font-weight:700;font-size:.82rem;padding:8px 15px;border-radius:999px;white-space:nowrap}
+
+/* HERO */
+header{min-height:100svh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;
+  background:radial-gradient(120% 90% at 20% 10%,#a63a1f 0%,transparent 55%),
+             radial-gradient(100% 80% at 85% 20%,#d9a44133 0%,transparent 50%),
+             linear-gradient(165deg,var(--rojo) 0%,var(--rojo-osc) 55%,#3d0e08 100%)}
+header::before{content:"";position:absolute;inset:0;opacity:.07;
+  background-image:radial-gradient(var(--crema) 1.2px,transparent 1.2px);background-size:26px 26px}
+.papel{position:absolute;top:0;left:0;right:0;height:14px;opacity:.9;
+  background:repeating-linear-gradient(90deg,var(--oro) 0 24px,var(--terracota) 24px 48px,var(--verde) 48px 72px,var(--crema) 72px 96px)}
+.hero-inner{position:relative;z-index:2;padding:90px 24px 60px;max-width:760px;animation:rise 1s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.kicker{color:var(--oro);font-weight:600;letter-spacing:.35em;font-size:.72rem;text-transform:uppercase;margin-bottom:18px}
+.hero-inner h1{color:var(--crema);font-size:clamp(2.6rem,9vw,4.6rem);font-weight:900;line-height:1.05;margin-bottom:18px}
+.hero-inner h1 em{color:var(--oro);font-style:italic}
+.hero-sub{color:#f4e7cecc;font-size:clamp(1rem,2.6vw,1.2rem);max-width:520px;margin:0 auto 14px}
+.stars{color:var(--oro);font-size:1rem;letter-spacing:.2em;margin-bottom:28px}
+.stars b{color:var(--crema);letter-spacing:0;font-size:.9rem;margin-left:8px}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;font-size:.95rem;padding:15px 28px;border-radius:999px;transition:.25s}
+.btn-gold{background:var(--oro);color:var(--tinta)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(217,164,65,.4)}
+.btn-ghost{border:1.5px solid rgba(251,243,228,.6);color:var(--crema)}
+.btn-ghost:hover{background:rgba(251,243,228,.12)}
+.scroll-cue{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:#f4e7ce88;font-size:1.4rem;animation:bob 1.8s infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+
+/* QUICK BAR */
+.quickbar{background:var(--tinta);color:var(--crema);display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px}
+.quickbar>div{padding:18px 16px;text-align:center;background:#2b1b12;border-top:3px solid var(--oro)}
+.quickbar b{display:block;color:var(--oro);font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;margin-bottom:4px}
+.quickbar span{font-size:.92rem}
+.quickbar a{color:var(--crema);text-decoration:none;font-weight:600}
+
+/* SECTIONS */
+section{padding:84px 24px}
+.wrap{max-width:1000px;margin:0 auto}
+.sec-kicker{color:var(--terracota);font-weight:700;letter-spacing:.3em;font-size:.7rem;text-transform:uppercase;margin-bottom:12px}
+.sec-title{font-size:clamp(1.9rem,5.5vw,3rem);font-weight:900;line-height:1.1;margin-bottom:20px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.on{opacity:1;transform:none}
+
+/* STORY */
+.story{background:var(--crema)}
+.story-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.story p{margin-bottom:14px;color:#4a382b}
+.pullquote{background:var(--crema-2);border-left:4px solid var(--oro);padding:26px;border-radius:0 16px 16px 0;font-family:'Fraunces',serif;font-style:italic;font-size:1.25rem;line-height:1.5;color:var(--rojo-osc)}
+.pullquote small{display:block;margin-top:12px;font-family:'Inter',sans-serif;font-style:normal;font-size:.78rem;color:#8a7358;letter-spacing:.1em;text-transform:uppercase}
+.photo-slot{border-radius:18px;min-height:320px;display:flex;align-items:flex-end;padding:18px;color:#fff;position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#c0552f,#8c2318 60%,#5e150d)}
+.photo-slot::after{content:"";position:absolute;inset:0;background-image:radial-gradient(#fff2 1px,transparent 1px);background-size:20px 20px}
+.photo-slot span{position:relative;z-index:2;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;opacity:.85}
+
+/* MENU */
+.menu{background:linear-gradient(180deg,var(--tinta),#1d110a)}
+.menu .sec-kicker{color:var(--oro)}
+.menu .sec-title{color:var(--crema)}
+.menu-note{color:#c9b394;font-size:.85rem;margin-bottom:36px}
+.dishes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.dish{background:#33211566;border:1px solid #d9a44126;border-radius:16px;padding:26px 22px;transition:.3s}
+.dish:hover{transform:translateY(-4px);border-color:#d9a44166;background:#3a261877}
+.dish h3{color:var(--oro);font-size:1.2rem;margin-bottom:8px}
+.dish p{color:#e8d9bfB3;font-size:.9rem}
+.dish .tag{display:inline-block;margin-top:12px;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--crema);background:#8c2318;padding:4px 10px;border-radius:999px}
+
+/* REVIEWS */
+.reviews{background:var(--crema-2)}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:34px}
+.rev{background:#fff;border-radius:16px;padding:26px;box-shadow:0 6px 24px rgba(43,27,18,.07)}
+.rev .stars-s{color:var(--oro);letter-spacing:.15em;margin-bottom:12px}
+.rev p{font-style:italic;color:#4a382b;font-size:.95rem;margin-bottom:14px}
+.rev b{font-size:.8rem;letter-spacing:.08em;color:var(--terracota);text-transform:uppercase}
+.google-badge{display:inline-flex;align-items:center;gap:10px;background:#fff;border-radius:999px;padding:10px 20px;box-shadow:0 4px 16px rgba(0,0,0,.08);font-weight:700;margin-top:8px}
+.google-badge span{color:var(--oro)}
+
+/* VISIT */
+.visit{background:var(--crema)}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.info-card{background:#fff;border-radius:18px;padding:30px;box-shadow:0 8px 30px rgba(43,27,18,.08)}
+.info-card h3{color:var(--rojo);margin-bottom:6px;font-size:1.05rem}
+.info-card .row{padding:14px 0;border-bottom:1px dashed #e4d5bd}
+.info-card .row:last-child{border:none}
+.hours-table{width:100%;font-size:.92rem}
+.hours-table td{padding:4px 0;color:#4a382b}
+.hours-table td:last-child{text-align:right;font-weight:600}
+.map-frame{border:0;width:100%;height:100%;min-height:380px;border-radius:18px;box-shadow:0 8px 30px rgba(43,27,18,.12)}
+.big-call{display:flex;width:100%;justify-content:center;margin-top:16px}
+
+/* FOOTER */
+footer{background:var(--tinta);color:#c9b394;text-align:center;padding:44px 24px;font-size:.85rem}
+footer .brand{font-size:1.3rem;display:block;margin-bottom:10px}
+footer a{color:var(--oro);text-decoration:none}
+
+/* STICKY MOBILE CALL BAR */
+.mobile-bar{position:fixed;bottom:0;left:0;right:0;z-index:99;display:none;grid-template-columns:1fr 1fr;background:var(--tinta);box-shadow:0 -4px 20px rgba(0,0,0,.3)}
+.mobile-bar a{padding:15px;text-align:center;font-weight:700;font-size:.9rem;text-decoration:none}
+.mobile-bar a:first-child{background:var(--oro);color:var(--tinta)}
+.mobile-bar a:last-child{background:var(--rojo);color:var(--crema)}
+
+@media(max-width:820px){
+  .story-grid,.visit-grid{grid-template-columns:1fr}
+  section{padding:64px 20px}
+  .mobile-bar{display:grid}
+  footer{padding-bottom:96px}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="brand" href="#">La Cocina de <em>Irma</em></a>
+  <div class="nav-right">
+    <button class="lang-btn" id="langToggle" aria-label="Switch language">EN / ES</button>
+    <a class="call-pill" href="tel:+17737665799">☎ <span class="es">Llamar</span><span class="en">Call</span></a>
+  </div>
+</nav>
+
+<header>
+  <div class="papel"></div>
+  <div class="hero-inner">
+    <p class="kicker"><span class="es">La Villita · Chicago · Desde el corazón</span><span class="en">Little Village · Chicago · From the heart</span></p>
+    <h1><span class="es">Cocina mexicana<br>con sabor a <em>familia</em></span><span class="en">Mexican home cooking<br>that feels like <em>family</em></span></h1>
+    <p class="hero-sub"><span class="es">Seis mesas, recetas de casa y la sazón de Irma. Aquí no eres un cliente — eres un invitado.</span><span class="en">Six tables, family recipes, and Irma's seasoning. Here you're not a customer — you're a guest.</span></p>
+    <div class="stars">★★★★★ <b>4.9 · 531 <span class="es">reseñas en Google</span><span class="en">Google reviews</span></b></div>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="tel:+17737665799">☎ <span class="es">Llámanos</span><span class="en">Call us</span></a>
+      <a class="btn btn-ghost" href="https://maps.google.com/?q=4224+W+31st+St,+Chicago,+IL+60623" target="_blank" rel="noopener">📍 <span class="es">Cómo llegar</span><span class="en">Directions</span></a>
+    </div>
+  </div>
+  <div class="scroll-cue">▾</div>
+</header>
+
+<div class="quickbar">
+  <div><b><span class="es">Horario</span><span class="en">Hours</span></b><span><span class="es">Mar–Dom · 9am–8pm</span><span class="en">Tue–Sun · 9am–8pm</span></span></div>
+  <div><b><span class="es">Dirección</span><span class="en">Address</span></b><span>4224 W 31st St, Chicago</span></div>
+  <div><b><span class="es">Teléfono</span><span class="en">Phone</span></b><a href="tel:+17737665799">(773) 766-5799</a></div>
+</div>
+
+<section class="story" id="historia">
+  <div class="wrap story-grid">
+    <div class="reveal">
+      <p class="sec-kicker"><span class="es">Nuestra historia</span><span class="en">Our story</span></p>
+      <h2 class="sec-title"><span class="es">La mesa de Irma siempre tiene un lugar para ti</span><span class="en">There's always a seat at Irma's table</span></h2>
+      <p><span class="es">En un pequeño local de la calle 31, Irma y Miguel cocinan como se cocina en casa: sin prisa, con ingredientes frescos y con las recetas que han pasado de generación en generación.</span><span class="en">In a small spot on 31st Street, Irma and Miguel cook the way you cook at home: unhurried, with fresh ingredients, and with recipes passed down through generations.</span></p>
+      <p><span class="es">Son solo seis mesas — y así nos gusta. Su hijo te recibe con una sonrisa, te recomienda el platillo del día, y cuando pruebas la salsa de mango habanero de la casa, entiendes por qué la gente vuelve una y otra vez.</span><span class="en">It's only six tables — and that's how we like it. Their son greets you with a smile, recommends the dish of the day, and when you try the house mango-habanero sauce, you understand why people keep coming back.</span></p>
+      <div class="pullquote">
+        <span class="es">"No se siente como un restaurante. Se siente como llegar a la casa de tu familia."</span>
+        <span class="en">"It doesn't feel like a restaurant. It feels like arriving at your family's home."</span>
+        <small><span class="es">— Reseña de Google</span><span class="en">— Google review</span></small>
+      </div>
+    </div>
+    <div class="photo-slot reveal"><span><span class="es">Foto: Irma y Miguel en la cocina</span><span class="en">Photo: Irma & Miguel in the kitchen</span></span></div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <p class="sec-kicker reveal"><span class="es">Los favoritos de la casa</span><span class="en">House favorites</span></p>
+    <h2 class="sec-title reveal"><span class="es">Hecho hoy, como siempre</span><span class="en">Made today, like always</span></h2>
+    <p class="menu-note reveal"><span class="es">Menú de muestra — pregunta por el platillo del día.</span><span class="en">Sample menu — ask about the dish of the day.</span></p>
+    <div class="dishes">
+      <div class="dish reveal"><h3><span class="es">Salsa Mango Habanero</span><span class="en">Mango-Habanero Sauce</span></h3><p><span class="es">La estrella de la casa: dulce, picosa y adictiva. Pídela con todo.</span><span class="en">The star of the house: sweet, spicy, addictive. Order it with everything.</span></p><span class="tag"><span class="es">La favorita</span><span class="en">Fan favorite</span></span></div>
+      <div class="dish reveal"><h3><span class="es">Chilaquiles de Irma</span><span class="en">Irma's Chilaquiles</span></h3><p><span class="es">Rojos o verdes, con crema, queso fresco y huevo al gusto.</span><span class="en">Red or green, with crema, queso fresco, and eggs your way.</span></p></div>
+      <div class="dish reveal"><h3><span class="es">Tacos de Guisado</span><span class="en">Guisado Tacos</span></h3><p><span class="es">Guisos caseros del día en tortillas recién hechas.</span><span class="en">Homestyle stews of the day on fresh tortillas.</span></p></div>
+      <div class="dish reveal"><h3><span class="es">Mole de la Casa</span><span class="en">House Mole</span></h3><p><span class="es">Receta de familia, cocinado a fuego lento.</span><span class="en">A family recipe, slow-cooked with care.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap" style="text-align:center">
+    <p class="sec-kicker reveal"><span class="es">Lo que dice la gente</span><span class="en">What people say</span></p>
+    <h2 class="sec-title reveal"><span class="es">4.9 estrellas. 531 opiniones. Puro cariño.</span><span class="en">4.9 stars. 531 reviews. Pure love.</span></h2>
+    <div class="rev-grid">
+      <div class="rev reveal"><div class="stars-s">★★★★★</div><p><span class="es">"La comida sabe a hogar. Irma sale de la cocina a saludar. Volveremos siempre."</span><span class="en">"The food tastes like home. Irma comes out of the kitchen to say hello. We'll always come back."</span></p><b>Google</b></div>
+      <div class="rev reveal"><div class="stars-s">★★★★★</div><p><span class="es">"Su hijo es el mejor mesero de Chicago — te atiende como si fueras de la familia."</span><span class="en">"Their son is the best server in Chicago — he treats you like family."</span></p><b>Google</b></div>
+      <div class="rev reveal"><div class="stars-s">★★★★★</div><p><span class="es">"Esa salsa de mango habanero debería ser ilegal. Increíble."</span><span class="en">"That mango-habanero sauce should be illegal. Incredible."</span></p><b>Google</b></div>
+    </div>
+    <div class="google-badge reveal"><span>★</span> 4.9 / 5 — Google Reviews</div>
+  </div>
+</section>
+
+<section class="visit" id="visita">
+  <div class="wrap">
+    <p class="sec-kicker reveal"><span class="es">Visítanos</span><span class="en">Visit us</span></p>
+    <h2 class="sec-title reveal"><span class="es">Te esperamos en La Villita</span><span class="en">We'll see you in Little Village</span></h2>
+    <div class="visit-grid">
+      <div class="info-card reveal">
+        <div class="row"><h3><span class="es">Dirección</span><span class="en">Address</span></h3><p>4224 W 31st St, Chicago, IL 60623</p></div>
+        <div class="row"><h3><span class="es">Teléfono</span><span class="en">Phone</span></h3><p><a href="tel:+17737665799" style="color:var(--terracota);font-weight:700;text-decoration:none">(773) 766-5799</a></p></div>
+        <div class="row"><h3><span class="es">Horario</span><span class="en">Hours</span></h3>
+          <table class="hours-table">
+            <tr><td><span class="es">Martes – Domingo</span><span class="en">Tuesday – Sunday</span></td><td>9:00 am – 8:00 pm</td></tr>
+            <tr><td><span class="es">Lunes</span><span class="en">Monday</span></td><td><span class="es">Cerrado</span><span class="en">Closed</span></td></tr>
+          </table>
+          <p style="font-size:.75rem;color:#8a7358;margin-top:8px"><span class="es">* Horario de muestra — confirmar con el negocio.</span><span class="en">* Sample hours — confirm with the business.</span></p>
+        </div>
+        <div class="big-call"><a class="btn btn-gold" href="tel:+17737665799">☎ <span class="es">Llamar ahora</span><span class="en">Call now</span></a></div>
+      </div>
+      <iframe class="map-frame reveal" loading="lazy" title="Mapa — La Cocina de Irma"
+        src="https://www.google.com/maps?q=4224+W+31st+St,+Chicago,+IL+60623&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="brand">La Cocina de <em style="color:var(--oro);font-style:normal">Irma</em></span>
+  <p>4224 W 31st St, Chicago, IL 60623 · <a href="tel:+17737665799">(773) 766-5799</a></p>
+  <p style="margin-top:14px;opacity:.6"><span class="es">Hecho con cariño en La Villita.</span><span class="en">Made with love in Little Village.</span></p>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+17737665799">☎ <span class="es">Llamar</span><span class="en">Call</span></a>
+  <a href="https://maps.google.com/?q=4224+W+31st+St,+Chicago,+IL+60623" target="_blank" rel="noopener">📍 <span class="es">Llegar</span><span class="en">Directions</span></a>
+</div>
+
+<script>
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>40),{passive:true});
+document.getElementById('langToggle').onclick=()=>{
+  document.body.classList.toggle('en');
+  document.documentElement.lang=document.body.classList.contains('en')?'en':'es';
+};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
